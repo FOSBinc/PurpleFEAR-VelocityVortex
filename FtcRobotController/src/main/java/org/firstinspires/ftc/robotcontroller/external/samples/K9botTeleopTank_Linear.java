@@ -41,7 +41,7 @@ public class K9botTeleopTank_Linear extends LinearOpMode {
          */
         robot.init(hardwareMap);
 
-        // Send telemetry message to signify robot waiting;
+        // Send telemetry message to signify robt waiting;
         telemetry.addData("Say", "Hello Driver");    //
         telemetry.update();
 
