@@ -51,10 +51,7 @@ public class MVTeleOpTelemetry extends MVTeleOpHardware {
      *
      * The system calls this member when the class is instantiated.
      */
-    public MVTeleOpTelemetry ()
-
-
-    {
+    public MVTeleOpTelemetry () {
         //
         // Initialize base classes.
         //
@@ -75,10 +72,7 @@ public class MVTeleOpTelemetry extends MVTeleOpHardware {
     /**
      * Update the telemetry with current values from the base class.
      */
-    public void update_telemetry ()
-
-
-    {
+    public void update_telemetry () {
         if (a_warning_generated()) {
             set_first_message(a_warning_message());
         }
@@ -123,10 +117,7 @@ public class MVTeleOpTelemetry extends MVTeleOpHardware {
     /**
      * Update the telemetry with current gamepad readings.
      */
-    public void update_gamepad_telemetry ()
-
-
-    {
+    public void update_gamepad_telemetry () {
         //
         // Send telemetry data concerning gamepads to the driver station.
         //
@@ -147,10 +138,7 @@ public class MVTeleOpTelemetry extends MVTeleOpHardware {
     /**
      * Update the telemetry's first message with the specified message.
      */
-    public void set_first_message (String p_message)
-
-
-    {
+    public void set_first_message (String p_message) {
         telemetry.addData ( "00", p_message);
 
 
@@ -164,10 +152,7 @@ public class MVTeleOpTelemetry extends MVTeleOpHardware {
     /**
      * Update the telemetry's first message to indicate an error.
      */
-    public void set_error_message (String p_message)
-
-
-    {
+    public void set_error_message (String p_message) {
         set_first_message("ERROR: " + p_message);
 
 
