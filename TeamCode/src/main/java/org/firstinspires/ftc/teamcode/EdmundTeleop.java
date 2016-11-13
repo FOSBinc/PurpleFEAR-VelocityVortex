@@ -7,8 +7,8 @@ public class EdmundTeleop extends MVTeleOpTelemetry {
     DcMotor rightback_motor;
     DcMotor leftfront_motor;
     DcMotor rightfront_motor;
-   /* DcMotor shooter_left;
-    DcMotor shooter_right;*/
+    /* DcMotor shooter_left;
+     DcMotor shooter_right;*/
     DcMotor tumbler;
 
 
@@ -21,7 +21,6 @@ public class EdmundTeleop extends MVTeleOpTelemetry {
         /*shooter = hardwareMap.dcMotor.get("shooter_right");
         shooter = hardwareMap.dcMotor.get("shooter_left");*/
         tumbler = hardwareMap.dcMotor.get("tumbler");
-
 
 
     }
@@ -39,18 +38,20 @@ public class EdmundTeleop extends MVTeleOpTelemetry {
         rightback_motor.setPower(rightY);
         leftfront_motor.setPower(leftY);
         rightfront_motor.setPower(rightY);
-    }
+
 
     /*if(gamepad.something out){
         shooter_left.setPower(0,1);
     }
     */
 
-if(gamepad.left_trigger){
+        if (gamepad.left_trigger) {
 
-    tumbler.setPower(1)
-}
-if(gamepad.right_trigger)  {
-    tumbler.setPower(-1)
+            tumbler.setPower(1)
+        }
+        if (gamepad.right_trigger) {
+            tumbler.setPower(-1)
+        }
+
     }
 }
