@@ -2,7 +2,7 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-public class EdmundTeleop extends MVTeleOpTelemetry{
+public class EdmundTeleop extends MVTeleOpTelemetry {
     DcMotor leftback_motor;     //identify all of the motors
     DcMotor rightback_motor;
     DcMotor leftfront_motor;
@@ -35,6 +35,10 @@ public class EdmundTeleop extends MVTeleOpTelemetry{
         leftY = (float) scaleInput(leftY);      //use the scaleInput function on the power to scale
         rightY = (float) scaleInput(rightY);    //it
 
+        leftback_motor.setPower(leftY);         //set the power to each corresponding motor
+        rightback_motor.setPower(rightY);
+        leftfront_motor.setPower(leftY);
+        rightfront_motor.setPower(rightY);
     }
 
     /*if(gamepad.something out){
