@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.util.Range;
 
 
 /**
- * Created by Rosa on 12/5/2015.
+ * Created by Francis Fernandez on 12/5/2015.
  */
 public class MVTeleOpHardware extends OpMode {
 

@@ -2,7 +2,7 @@ package com.qualcomm.ftcrobotcontroller.opmodes;
 
 
 /**
- * Created by Rosa on 12/5/2015.
+ * Created by Francis Fernandez on 12/5/2015.
  */
 
 

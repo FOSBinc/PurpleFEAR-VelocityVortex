@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 
 /**
- * Created by Juan Pablo Martinez on 11/29/2015.
+ * Created by Francis Fernandez on 11/29/2015.
  */
 public class MVMSTeleOpTankMode extends MVTeleOpTelemetry{
     DcMotor leftback_motor;     //identify all of the motors
@@ -21,7 +21,7 @@ public class MVMSTeleOpTankMode extends MVTeleOpTelemetry{
         leftfront_motor = hardwareMap.dcMotor.get("leftfront_motor");   //of the motors in the
         rightback_motor = hardwareMap.dcMotor.get("rightback_motor");   //configure file on the
         rightfront_motor = hardwareMap.dcMotor.get("rightfront_motor"); //phone
-        shooter = hardwareMap.dcMotor.get("shooter")
+        shooter = hardwareMap.dcMotor.get("shooter");
 
 
     }
@@ -42,6 +42,9 @@ public class MVMSTeleOpTankMode extends MVTeleOpTelemetry{
         rightback_motor.setPower(rightY);
         leftfront_motor.setPower(leftY);
         rightfront_motor.setPower(rightY);
+
+        if(gamepad.right_trigger) {
+        }
 
     }
 
