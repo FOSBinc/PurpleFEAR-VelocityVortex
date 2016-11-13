@@ -21,7 +21,7 @@ public class Test_TeleOp_Aakarsh extends LinearOpMode {
         double back;
 
 
-        robot.init(hardwareMap);
+        //robot.init(hardwareMap);
 
         waitForStart();
 
@@ -29,8 +29,8 @@ public class Test_TeleOp_Aakarsh extends LinearOpMode {
 
             front = -gamepad1.left_stick_y;
             back = -gamepad1.right_stick_y;
-            robot.leftMotor.setPower(front);
-            robot.rightMotor.setPower(back);
+            //robot.leftMotor.setPower(front);
+            //robot.rightMotor.setPower(back);
 
 
             if (gamepad1.a)

@@ -40,10 +40,10 @@ public class EdmundTeleop extends MVTeleOpTelemetry {
         rightfront_motor.setPower(rightY);
 
 
-    /*if(gamepad.something out){
-        shooter_left.setPower(0,1);
-    }
-    */
+        /*if(gamepad.something out){
+            shooter_left.setPower(0,1);
+        }
+        */
 
         if (gamepad.left_trigger) {
 
