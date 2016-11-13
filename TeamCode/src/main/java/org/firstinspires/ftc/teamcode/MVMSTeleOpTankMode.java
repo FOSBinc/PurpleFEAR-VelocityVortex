@@ -7,11 +7,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by Juan Pablo Martinez on 11/29/2015.
  */
-public class MVMSTeleOpTankMode extends MVTeleOpTelemetry {
+public class MVMSTeleOpTankMode extends MVTeleOpTelemetry{
     DcMotor leftback_motor;     //identify all of the motors
     DcMotor rightback_motor;
     DcMotor leftfront_motor;
     DcMotor rightfront_motor;
+    DcMotor shooter;
 
 
     @Override
@@ -20,6 +21,8 @@ public class MVMSTeleOpTankMode extends MVTeleOpTelemetry {
         leftfront_motor = hardwareMap.dcMotor.get("leftfront_motor");   //of the motors in the
         rightback_motor = hardwareMap.dcMotor.get("rightback_motor");   //configure file on the
         rightfront_motor = hardwareMap.dcMotor.get("rightfront_motor"); //phone
+        shooter = hardwareMap.dcMotor.get("shooter")
+
 
     }
 
@@ -28,9 +31,9 @@ public class MVMSTeleOpTankMode extends MVTeleOpTelemetry {
 
         float rightY = gamepad1.right_stick_y;  //create a float based off of the y axis of the left
         float leftY = -gamepad1.left_stick_y;   //and right joysticks
-
         telemetry.addData("RightY", rightY);    //print out the current y axis of both joysticks
         telemetry.addData("LeftY", leftY);
+        telemetry.addData("In", in);
 
         leftY = (float) scaleInput(leftY);      //use the scaleInput function on the power to scale
         rightY = (float) scaleInput(rightY);    //it
@@ -41,6 +44,8 @@ public class MVMSTeleOpTankMode extends MVTeleOpTelemetry {
         rightfront_motor.setPower(rightY);
 
     }
+
+
 
 
     double scaleInput(double dVal)  {
